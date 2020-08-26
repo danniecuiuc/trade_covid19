@@ -1,3 +1,3 @@
 # trade_covid19
-- quantitative trading algorithms amid covid19 
-- factor modeling:  modified multifactor models with alternative data analytics (google trends)
+- quantitative trading algorithms development  amid covid19 
+- factor modeling and alternative data analytics
