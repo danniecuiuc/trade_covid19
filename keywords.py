@@ -1,4 +1,4 @@
-# extract keywords for s&p 500 componentsfrom pytrends.request import TrendReq
+# extract keywords for s&p 500 components
 from pytrends.request import TrendReq
 import pandas as pd
 import time
