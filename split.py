@@ -7,16 +7,12 @@ import sys
 startTime = time.time()
 pytrends = TrendReq(hl='en-US', tz=360, timeout=(10, 25))
 
-trends = pytrends.related_queries()
-
-df_split = pd.read_csv("~/downloads/ra_paper/keyword_list_2.csv")
-df_split_test = df_split["keywords"].values.tolist()[231:241]   #0-241 DONE
+df_split = pd.read_csv("~/downloads/ra_paper/keyword_list_2.csv",encoding = "ISO-8859-1")
+df_split_test = df_split["keywords"].values.tolist()[261:271]   #0-261 DONE
 
 for x in range(0, len(df_split_test)): 
     keywords = [df_split_test[x]]
     print(keywords)
-
-print(df_split_test)
 
 keyword_data = pd.DataFrame()
 
