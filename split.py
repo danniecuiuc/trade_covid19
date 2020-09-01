@@ -15,19 +15,19 @@ for x in range(0, len(df_split_test)):
 
 keyword_data = pd.DataFrame()
 
-for x in range(0, len(df_split_test)): 
-    startTime = time.time()
-    pytrends.build_payload(kw_list=[df_split_test[x]], cat=0, timeframe='2020-01-01 2020-07-30', geo='US')
-    related_queries = pytrends.related_queries()
-    trends_value = related_queries[df_split_test[x]]['top']
-    non_value = len(trends_value)==0
-    print(non_value)
-
 #  for x in range(0, len(df_split_test)): 
     #  startTime = time.time()
     #  pytrends.build_payload(kw_list=[df_split_test[x]], cat=0, timeframe='2020-01-01 2020-07-30', geo='US')
     #  related_queries = pytrends.related_queries()
-    #  trends_value = related_queries[df_split_test[x]]['top'].head(25)
-    #  keyword_data = keyword_data.append(trends_value)
+    #  trends_value = related_queries[df_split_test[x]]['top']
+    #  if len(trends_value)==0:
+        #  print(related_queries[df_split_test[x]]['key'])
+
+for x in range(0, len(df_split_test)): 
+    startTime = time.time()
+    pytrends.build_payload(kw_list=[df_split_test[x]], cat=0, timeframe='2020-01-01 2020-07-30', geo='US')
+    related_queries = pytrends.related_queries()
+    trends_value = related_queries[df_split_test[x]]['top'].head(25)
+    keyword_data = keyword_data.append(trends_value)
 
 print(keyword_data)
